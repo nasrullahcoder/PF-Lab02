@@ -1,29 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    // Initial variables
-    float vi = 12.5;   // Initial velocity in m/s
-    float a = 3.2;     // Acceleration in m/s^2
-    float t = 6.0;     // Time in seconds
+    // Declare and initialize loan variables
+    double principal = 250000.00;
+    float rate = 8.5;
+    int time = 3;
 
-    // Calculate final velocity
-    float vf = vi + (a * t);
+    // Calculate Simple Interest
+    double interest = (principal * rate * time) / 100.0;
 
-    // Calculate total distance travelled
-    float s = (vi * t) + (0.5 * a * t * t);
+    // Calculate Total Payable Amount
+    double totalAmount = principal + interest;
 
-    // Display kinematic parameters
-    printf("========================================\n");
-    printf("\tKINEMATIC MOTION REPORT\n");
-    printf("========================================\n");
+    // Calculate Monthly Installment
+    double monthlyInstallment = totalAmount / (time * 12.0);
 
-    printf("Initial Velocity\t: %.2f m/s\n", vi);
-    printf("Acceleration\t\t: %.2f m/s^2\n", a);
-    printf("Time Elapsed\t\t: %.2f s\n", t);
-    printf("Final Velocity\t\t: %.2f m/s\n", vf);
-    printf("Distance Travelled\t: %.2f m\n", s);
+    // Display Loan Amortization Summary
+    printf("===============================================\n");
+    printf("\t\tLOAN AMORTIZATION SUMMARY\n");
+    printf("===============================================\n");
 
-    printf("========================================\n");
+    printf("Principal Loan Amount\t: PKR %.2f\n", principal);
+    printf("Annual Interest Rate\t: %.2f%%\n", rate);
+    printf("Loan Period\t\t: %d years\n", time);
+    printf("Simple Interest\t\t: PKR %.2f\n", interest);
+    printf("Total Payable Amount\t: PKR %.2f\n", totalAmount);
+    printf("Monthly Installment\t: PKR %.2f\n", monthlyInstallment);
+
+    printf("===============================================\n");
 
     return 0;
 }

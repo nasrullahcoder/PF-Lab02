@@ -1,25 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    // Declare and initialize variables
-    float radius = 7.5;
-    float pi = 3.14159;
+    // Initial variables
+    float vi = 12.5;   // Initial velocity in m/s
+    float a = 3.2;     // Acceleration in m/s^2
+    float t = 6.0;     // Time in seconds
 
-    // Calculate geometric properties
-    float diameter = 2 * radius;
-    float circumference = 2 * pi * radius;
-    float area = pi * radius * radius;
+    // Calculate final velocity
+    float vf = vi + (a * t);
 
-    // Display geometric properties report
+    // Calculate total distance travelled
+    float s = (vi * t) + (0.5 * a * t * t);
+
+    // Display kinematic parameters
     printf("========================================\n");
-    printf("\tCIRCLE GEOMETRIC PROPERTIES\n");
+    printf("\tKINEMATIC MOTION REPORT\n");
     printf("========================================\n");
 
-    printf("Radius\t\t: %.3f\n", radius);
-    printf("Pi\t\t: %.3f\n", pi);
-    printf("Diameter\t: %.3f\n", diameter);
-    printf("Circumference\t: %.3f\n", circumference);
-    printf("Area\t\t: %.3f\n", area);
+    printf("Initial Velocity\t: %.2f m/s\n", vi);
+    printf("Acceleration\t\t: %.2f m/s^2\n", a);
+    printf("Time Elapsed\t\t: %.2f s\n", t);
+    printf("Final Velocity\t\t: %.2f m/s\n", vf);
+    printf("Distance Travelled\t: %.2f m\n", s);
 
     printf("========================================\n");
 

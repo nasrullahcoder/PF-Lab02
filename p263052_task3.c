@@ -1,14 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-  printf("============== C ESCAPE SEQUENCE REFERENCE ===============\n");
-  printf("To print a double quote, write :      \\\"\n");
-  printf(" To print a literal backlash, write: \\\\\n:);
-  printf(" to inert a newline break, write: \\n\n");
-  printf(" to inert a horizontal tab stop, write: \\t\n");
-   printf(" to print a percent sign, write:  %%");
+int main() {
+    // Declare and initialize variables
+    char myChar = 'A';
+    int myInt = 2026;
+    float myFloat = 82.75f;
+    double myDouble = 148500.50;
 
-return 0;
+    // Display tabular report
+    printf("TYPE\t\tVALUE\t\tSIZE (bytes)\n");
+    printf("---------------------------------------------\n");
+
+    printf("char\t\t%c\t\t%zu\n", myChar, sizeof(myChar));
+    printf("int\t\t%d\t\t%zu\n", myInt, sizeof(myInt));
+    printf("float\t\t%.2f\t\t%zu\n", myFloat, sizeof(myFloat));
+    printf("double\t\t%.2lf\t\t%zu\n", myDouble, sizeof(myDouble));
+
+    return 0;
 }
-   

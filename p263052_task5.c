@@ -1,25 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    // Declare and initialize temperature in Celsius
-    float celsius = 37.5;
+    // Declare and initialize variables
+    float radius = 7.5;
+    float pi = 3.14159;
 
-    // Convert Celsius to Fahrenheit
-    float fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+    // Calculate geometric properties
+    float diameter = 2 * radius;
+    float circumference = 2 * pi * radius;
+    float area = pi * radius * radius;
 
-    // Convert Celsius to Kelvin
-    float kelvin = celsius + 273.15;
+    // Display geometric properties report
+    printf("========================================\n");
+    printf("\tCIRCLE GEOMETRIC PROPERTIES\n");
+    printf("========================================\n");
 
-    // Display conversion card
-    printf("====================================\n");
-    printf("\tTEMPERATURE CONVERSION\n");
-    printf("====================================\n");
+    printf("Radius\t\t: %.3f\n", radius);
+    printf("Pi\t\t: %.3f\n", pi);
+    printf("Diameter\t: %.3f\n", diameter);
+    printf("Circumference\t: %.3f\n", circumference);
+    printf("Area\t\t: %.3f\n", area);
 
-    printf("Celsius\t\t: %.2f °C\n", celsius);
-    printf("Fahrenheit\t: %.2f °F\n", fahrenheit);
-    printf("Kelvin\t\t: %.2f K\n", kelvin);
-
-    printf("====================================\n");
+    printf("========================================\n");
 
     return 0;
 }
